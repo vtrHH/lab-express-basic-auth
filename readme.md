@@ -69,12 +69,12 @@ At this point, we have implemented basic authentication features. Now, we have t
 
 Let's create two different routes protected by authentication:
 
-- `/main` - Add a funny picture of a cat and a link back to the home page
-- `/private` - Add your favorite `gif` and an `<h1>` denoting the page as private.
+- GET `/main` - Add a funny picture of a cat and a link back to the home page
+- GET `/private` - Add your favorite `gif` and an `<h1>` denoting the page as private.
 
 Create the views and add the middleware configuration to avoid accessing these routes without being authenticated.
 
-## Bonus - Frontend validations
+## Bonus - Iteration 4 - Frontend validations
 
 Let's add validations to our forms. Remember we have two different forms: sign up and login.
 
@@ -82,15 +82,22 @@ Remember, when a user signs up or logs in, both the username and password fields
 
 Check out the [documentation](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Data_form_validation) at MDN. See if you can find a *constraint* that requires the user to fill a field prior to submission.
 
-## Bonus - Password Strength Measurement
+## Bonus - Iteration 5 - Profile Page
 
-Finally, we will add some functionality to measure the password strength when we sign up in the application. We recommend you follow along with this [CSS-Tricks tutorial](https://css-tricks.com/password-strength-meter/), but feel free to come up with different solutions.
+Create the following routes and corresponding views:
 
-Once finished, the result should be something like this:
+- GET `/profile` - Should display basic information about the user, such as the email and user id.
 
-![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_b5907d78d23d2a6757a365df56bd34b9.png)
+## Bonus - Iteration 6 - Editing Profile
 
-This is a very common and helpful feature for users, as many do not know anything about password strength.
+Add a name property to the user schema that accepts a string and no has additional validators.
+
+Create the following routes and request handlers/ corresponding views:
+
+- GET `/profile/edit` - Should display a form that allows the user to edit his email and his name.
+- POST `/profile/edit` - Gets the `email` and `name` properties from the request body and updates the user document.
+
+Also, update the `/profile` view to display the user's name.
 
 ## Extra Resources
 
