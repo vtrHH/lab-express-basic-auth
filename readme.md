@@ -95,7 +95,7 @@ Add a name property to the user schema that accepts a string and no has addition
 Create the following routes and request handlers/corresponding views:
 
 - GET `/profile/edit` - Should display a form that allows the user to edit his email and his name.
-- POST `/profile/edit` - Gets the `email` and `name` properties from the request body and updates the user document.
+- POST `/profile/edit` - Gets the `username` and `name` properties from the request body and updates the user document.
 
 Both routes should disallow non-logged-in users. Also, update the `/profile` view to display the user's name.
 
