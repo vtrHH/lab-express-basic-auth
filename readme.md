@@ -86,18 +86,18 @@ Check out the [documentation](https://developer.mozilla.org/en-US/docs/Learn/HTM
 
 Create the following routes and corresponding views:
 
-- GET `/profile` - Should display basic information about the user, such as the email and user id.
+- GET `/profile` - Should display basic information about the user, such as the email and user id. Should not be accessible to non-logged-in users.
 
 ## Bonus - Iteration 6 - Editing Profile
 
 Add a name property to the user schema that accepts a string and no has additional validators.
 
-Create the following routes and request handlers/ corresponding views:
+Create the following routes and request handlers/corresponding views:
 
 - GET `/profile/edit` - Should display a form that allows the user to edit his email and his name.
 - POST `/profile/edit` - Gets the `email` and `name` properties from the request body and updates the user document.
 
-Also, update the `/profile` view to display the user's name.
+Both routes should disallow non-logged-in users. Also, update the `/profile` view to display the user's name.
 
 ## Extra Resources
 
