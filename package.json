@@ -1,5 +1,5 @@
 {
-  "name": "base",
+  "name": "lab-express-basic-auth",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -19,11 +19,11 @@
     "serve-favicon": "^2.5.0"
   },
   "devDependencies": {
-    "mocha": "^6.2.0",
-    "nodemon": "^1.19.2",
     "eslint": "^=6.3.0",
     "eslint-plugin-import": "^=2.18.2",
     "eslint-plugin-node": "^=0.0.0",
-    "eslint-plugin-promise": "^=4.2.1"
+    "eslint-plugin-promise": "^=4.2.1",
+    "mocha": "^6.2.0",
+    "nodemon": "^1.19.2"
   }
 }

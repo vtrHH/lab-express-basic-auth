@@ -22,12 +22,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(serveFavicon(join(__dirname, 'public/images', 'favicon.ico')));
 app.use(express.static(join(__dirname, 'public')));
-app.use(sassMiddleware({
-  src: join(__dirname, 'public'),
-  dest: join(__dirname, 'public'),
-  outputStyle: process.env.NODE_ENV === 'development' ? 'nested' : 'compressed',
-  sourceMap: true
-}));
+app.use(
+  sassMiddleware({
+    src: join(__dirname, 'public'),
+    dest: join(__dirname, 'public'),
+    outputStyle: process.env.NODE_ENV === 'development' ? 'nested' : 'compressed',
+    force: process.env.NODE_ENV === 'development',
+    sourceMap: true
+  })
+);
 
 app.use('/', indexRouter);
 
