@@ -1,9 +1,6 @@
-'use strict';
-
 const { join } = require('path');
 const express = require('express');
 const createError = require('http-errors');
-const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const sassMiddleware = require('node-sass-middleware');
 const serveFavicon = require('serve-favicon');
@@ -16,12 +13,11 @@ const app = express();
 app.set('views', join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
-app.use(serveFavicon(join(__dirname, 'public/images', 'favicon.ico')));
 app.use(express.static(join(__dirname, 'public')));
+app.use(serveFavicon(join(__dirname, 'public/images', 'favicon.ico')));
+
+app.use(logger('dev'));
+app.use(express.urlencoded({ extended: false }));
 app.use(
   sassMiddleware({
     src: join(__dirname, 'public'),

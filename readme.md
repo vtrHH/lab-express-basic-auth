@@ -39,25 +39,25 @@ Now you are ready to start 🚀
 
 ## Iteration 1 - Sign Up
 
-We have to create the signup of the application, that allow our users to register. The users have to provide the following information:
+We have to create the sign up functionality of the application, that allows new users to create an account. The users have to provide the following information:
 
 - **Username**: Must be unique in our application, and will identify each user.
-- **Password**: Must be encrypted, using `bcrypt`.
+- **Password**: Must be hashed, using `bcrypt`.
 
-To complete this first iteration, you have to create the database model with mongoose, the routes, and the views.
+To complete this first iteration, you have to create the `User` model with mongoose, the routes, and the views.
 
-Remember that you have to handle validation errors when a user signs up:
+Remember that you should to handle validation errors when a user signs up:
 
 - The fields can't be empty.
 - The username can't be repeated.
 
 ## Iteration 2 - Login
 
-Once the user has signed up, he has to be able to log in the application. You have to create the view and add the correct functionality in the controller to let them log in the application.
+Once the user has signed up, they have to be able to log in the application. You have to create the view and add the correct functionality in the controller to let them log in the application.
 
 Once the user has logged in, you have to create a session with `express-session` and `connect-mongo`.
 
-Again, we have to check out that the fields are correctly filled before try to authenticate him.
+Again, we have to check out that the fields are correctly filled before try to authenticate them.
 
 ## Iteration 3 - Protected Routes
 
@@ -72,11 +72,11 @@ Create the views and add the middleware configuration to avoid accessing these r
 
 ## Bonus - Iteration 4 - Frontend validations
 
-Let's add validations to our forms. Remember we have two different forms: sign up and login.
+Let's add validations to our forms. Remember we have two different forms: sign up and log in.
 
 Remember, when a user signs up or logs in, both the username and password fields must be filled in.
 
-Check out the [documentation](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Data_form_validation) at MDN. See if you can find a _constraint_ that requires the user to fill a field prior to submission.
+Check out the [documentation](https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Data_form_validation) on MDN. See if you can find a _constraint_ that requires the user to fill a field prior to submission.
 
 ## Bonus - Iteration 5 - Profile Page
 
@@ -99,4 +99,4 @@ Both routes should disallow non-logged-in users. Also, update the `/profile` vie
 
 - [HTML5 Form Validations](http://www.the-art-of-web.com/html/html5-form-validation/)
 
-Happy coding! :heart:
+Happy coding! 💙

@@ -32,7 +32,6 @@
       "named": "never",
       "asyncArrow": "always"
     }],
-    "strict": ["error", "global" ],
     "space-before-blocks": ["warn", "always"]
   }
 }
