@@ -8,8 +8,10 @@
     <nav>
       <a href="/">Home</a>
       {{#if user}}
+        <a href="/profile">My profile</a>
         <a href="/main">Main</a>
         <a href="/private">Private</a>
+        <a href="/profile/edit">Edit your profile</a>
         <form method="POST" action="/authentication/log-out">
         <button>Log Out</button>
          </form>
